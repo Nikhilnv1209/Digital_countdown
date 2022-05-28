@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(36, 50, 77);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.time-container,
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    color: white;
+}
+
+.time-container .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 12;
+}
+
+.time-container .circle .div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.9em;
+    width: 0;
+    height: 0;
+}
+
+.time-container .circle svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(90deg);
+}
+
+.time-container .circle svg circle {
+    height: 100%;
+    width: 100%;
+    fill: transparent;
+    stroke: rgba(0, 0, 0, 0.548);
+    stroke-width: 6.5px;
+    /* transform: translate(5px, 5px); */
+
+}
+
+.time-container .circle svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 418px;
+    /* stroke-dasharray: 300px; */
+    stroke-linecap: round;
+}
+
+.dots {
+    position: absolute;
+    /* min-width: 100%; */
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 12;
+}
+
+.dots::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--clr);
+    border-radius: 50%;
+    bottom: 0;
+    box-shadow: 0 0 20px var(--clr);
+}
