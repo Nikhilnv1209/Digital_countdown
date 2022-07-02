@@ -7,6 +7,7 @@
     /* border: 1px solid black; */
     font-family: 'Poppins', sans-serif;
     background-color: rgb(36, 50, 77);
+    height: 24vh;
 }
 
 body {
@@ -90,4 +91,17 @@ h1 {
     border-radius: 50%;
     bottom: 0;
     box-shadow: 0 0 20px var(--clr);
+}
+
+.time-container .circle .div:nth-child(even){
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    width: 0;
+    height: 0;
+    top: 11rem;
+    color : var(--clr);
 }
